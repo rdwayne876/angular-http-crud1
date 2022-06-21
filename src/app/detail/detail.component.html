@@ -1,0 +1,21 @@
+<mat-spinner *ngIf="product == {}"></mat-spinner>
+
+<div class="container">
+    <mat-card class="example-card">
+        <mat-card-title-group>
+          <mat-card-title>{{product.name}}</mat-card-title>
+          <mat-card-subtitle>{{product.price | currency}}</mat-card-subtitle>
+          <img mat-card-xl-image src={{product.imageUrl}}>
+        </mat-card-title-group>
+        <mat-card-content>
+          {{product.description}}
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-button>{{product.quantity}} Remaining</button>
+                <a href="order-success">
+                    <button mat-button>Order Now</button>
+                </a>
+          </mat-card-actions>
+      </mat-card>
+</div>
+

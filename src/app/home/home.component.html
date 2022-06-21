@@ -1,0 +1,23 @@
+<div class="container">
+    <mat-spinner *ngIf="products.length == 0"></mat-spinner>
+
+    <mat-card *ngFor="let product of products" class="card" style="margin-top:12px;">
+        <mat-card-header>
+            <mat-card-title>{{product.name}}</mat-card-title>
+            <mat-card-subtitle>{{product.price}} $/ {{product.quantity}}
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                {{product.description}}
+            </p>
+            <img style="height:100%; width: 100%;" src="{{ product.imageUrl }}" />
+        </mat-card-content>
+        <mat-card-actions>
+            <a href="dish/{{product.id}}">
+                <button mat-button> Buy Meal</button>
+            </a>
+        </mat-card-actions>
+    </mat-card>
+
+</div>

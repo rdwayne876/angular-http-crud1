@@ -1,0 +1,8 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(20%, 1fr) );
+    gap: 1rem;
+  }
+  .card {
+    grid-column: span 1;
+  }
